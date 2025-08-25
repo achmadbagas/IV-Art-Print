@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav-container {
+    background-color: #333;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.nav-brand h3 {
+    color: white;
+    line-height: 45px;
+}
+
+.nav-brand span {
+    color: orange;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0px 12px;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.nav-flex label,
+#humberger {
+    display: none;
+}
+
+/* Responsive untuk layar kecil */
+@media screen and (max-width:768px) {
+    #nav-container .nav-flex label {
+        display: inline-block;
+        color: #fff;
+        font-size: 25px;
+        margin-top: 2px;
+    }
+
+    #nav-container .nav-flex {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        background-color: #333;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 40px;
+        height: auto;
+    }
+
+    .nav-brand h3 {
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+
+    /* untuk Menampilkan / menyembunyikan menu */
+    #nav-container nav {
+        display: none;
+    }
+
+    #nav-container .nav-flex input:checked~nav {
+        display: block;
+    }
+
+}
